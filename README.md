@@ -1,4 +1,4 @@
-# AWS Lambda Java 20 Custom Runtime
+20.0.1.9.1# AWS Lambda Java 20 Custom Runtime
 ![Maven Central](https://img.shields.io/maven-central/v/io.microlam/lambda-java20-layer)
 
 Based on original work from Mark Sailes: [lambda-java17-layer](https://github.com/msailes/lambda-java17-layer)
@@ -32,7 +32,7 @@ The simplest way to bring the layer zip is to use the maven dependency plugin li
 			<artifactItem>
 				<groupId>io.microlam</groupId>
 				<artifactId>lambda-java20-layer</artifactId>
-				<version>20.0.0.36.1</version>
+				<version>20.0.1.9.1</version>
 				<classifier>${java20layer.arch}</classifier>
 				<type>zip</type>
 			</artifactItem>
@@ -59,7 +59,7 @@ LayerVersion java20layer = new LayerVersion(this, "Java20Layer-"+ arch, LayerVer
 				        .layerVersionName("Java20Layer-" + arch)
 				        .description("Java 20 " + arch)
 				        .compatibleRuntimes(Arrays.asList(software.amazon.awscdk.services.lambda.Runtime.PROVIDED_AL2))
-				        .code(Code.fromAsset("target/lambda-java20-layer-20.0.0.36.1-"+ arch + ".zip"))
+				        .code(Code.fromAsset("target/lambda-java20-layer-20.0.1.9.1-"+ arch + ".zip"))
 				        .build());
 
 Function handlerBuilder = Function.Builder.create(this, "SimpleLambda")			    		  
